@@ -1,0 +1,14 @@
+[
+    {
+        "name": "hakimel/reveal.js",
+        "version": "1.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ThomasWeinert/reveal.js.git",
+            "reference": "master"
+        },
+        "type": "library",
+        "installation-source": "source"
+    }
+]
