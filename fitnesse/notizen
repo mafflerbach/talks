@@ -1,0 +1,29 @@
+was ist selenium
+was ist fitnesse
+was ist xebium
+Roundtrip
+Brainoverload
+
+Möglichkeiten
+	Seiten typen
+	Includes
+	Special Pages
+		pageHeader
+		pageFooter
+		setup/teardown
+		SuiteSetUp/SuiteTearDown
+		TemplateLibrary
+		ScenarioLibrary
+	Variablen
+	Fixtures
+
+Brainoverload
+	was haben wir daraus gebaut.
+		Screenshottests
+		Trennung zwischen abstrakten tests und konkreten tests
+		Generierung von tests
+			- Browserdiversität mit den abstrakten tests
+		Browser matrix Generierung
+		Anpassung der xebium formatter Extension.
+
+
