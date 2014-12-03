@@ -1,0 +1,25 @@
+| script |
+| start browser | { 'name': 'windriver', 'remote': '!-http://-!192.168.50.136:4444/wd/hub','platform':'LINUX', 'browserName':'firefox'} | on url | http://xebia.github.io/ |
+| do | open | on | /Xebium/ |
+| check | is | assertText | on | css=h1 | Xebium |
+| ensure | do | click | on | link=Installation |
+| check | is | assertText | on | css=div.feature-header > h3 | Installation |
+| ensure | do | click | on | link=Getting started |
+| check | is | assertText | on | css=#getting-started > div.feature-header > h3 | Getting Started |
+| ensure | do | click | on | link=Further reading |
+| check | is | assertText | on | css=#further-reading > div.feature-block > h3 | Further reading |
+| stop browser |
+
+
+| script |
+| start browser | { 'name': 'windriver', 'remote': '!-http://-!192.168.50.136:4444/wd/hub','platform':'LINUX', 'browserName':'internet explorer' 'version':'8'} | on url | http://xebia.github.io/ |
+| do | open | on | /Xebium/ |
+| check | is | assertText | on | css=h1 | Xebium |
+| ensure | do | click | on | link=Installation |
+| check | is | assertText | on | css=div.feature-header > h3 | Installation |
+| ensure | do | click | on | link=Getting started |
+| check | is | assertText | on | css=#getting-started > div.feature-header > h3 | Getting Started |
+| ensure | do | click | on | link=Further reading |
+| check | is | assertText | on | css=#further-reading > div.feature-block > h3 | Further reading |
+| stop browser |
+

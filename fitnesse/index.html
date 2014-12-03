@@ -56,18 +56,18 @@
         <li class="fragment">Was ist selenium</li>
         <li class="fragment">Was ist fitnesse</li>
         <li class="fragment">Was ist xebium</li>
-        <li class="fragment">Möglichkeiten</li>
+        <li class="fragment">Möglichkeit</li>
         <li class="fragment">Brainoverload</li>
     </ul>
     <aside class="notes">
-        Bei den möglichkeiten
+        Bei den Möglichkeiten
                         <pre>
 Seiten typen
 Includes
 Special Pages
     pageHeader
     pageFooter
-    setup/teardown
+    setup/TearDown
     SuiteSetUp/SuiteTearDown
     TemplateLibrary
     ScenarioLibrary
@@ -117,7 +117,7 @@ Fixtures</pre>
     <section>
         <p>Alles ist an einem Ort definiert</p>
 
-        <p>Differenz zwischen SOLL und IST schneller zu erfassen.</p>
+        <p>Differenz zwischen SOLL und IST sind schneller zu erfassen.</p>
 
         <p>Tests können sehr schnell erstellt und verifiziert werden.</p>
         <aside class="notes">
@@ -131,9 +131,15 @@ Fixtures</pre>
             <li>Xebium Formatter [5]</li>
         </ul>
         <aside class="notes">
-            Xebium starten,
-            Test mit ide aufnehemn und exportieren,
-            Test in Fitnesse abspieln
+          <ul>
+            <li>Xebium starten</li>
+            <li>Seite anlegen mit Variablen und pom file definition.</li>
+            <li>SetUp Aufsetzen mit import und fixture</li>
+            <li>Test mit ide aufnehmen und exportieren</li>
+            <li>Test in Fitnesse abspielen</li>
+            <li>feststellen, dass der test nicht funktioniert, weil allgemeiner fehler auftritt</li>
+            <li>pom file -> selenium version auf 2.44.0 für den aktuellen firefox</li>
+          </ul>
         </aside>
     </section>
 </section>
@@ -149,7 +155,6 @@ Fixtures</pre>
     </section>
     <section>
         <h2>Includes</h2>
-
         <p><code>!include .FrontPage</code></p>
     </section>
     <section>
@@ -206,6 +211,10 @@ Fixtures</pre>
 | when a query is done for Xebium |
 | then search results should be found |</pre>
     </section>
+  <aside class="notes">
+    <a href="http://localhost:8000/XebiumTemplate">XebiumTemplate</a>
+  </aside>
+
 </section>
 
 
@@ -214,13 +223,14 @@ Fixtures</pre>
         <h2>Äh und wo war da Selenium?</h2>
     </section>
     <section>
-        <p>An dieser Stelle liefen die tests über die auseigene Fit engine</p>
+        <p>An dieser Stelle hat xebium ein selenium standalone server gestartet</p>
+        <p>Man kann die tests auch gegen ein Grid laufen lassen.</p>
     </section>
     <section>
         <h2>Ich hab da mal was vorbereitet</h2>
         <h4>Unsere Selenium architektur</h4>
         <aside class="notes">
-            selenium-hub.dim:4444/grid/console
+            <a target="_blank" href="selenium-hub.dim:4444/grid/console">Grid</a>
         </aside>
     </section>
 </section>
@@ -228,7 +238,7 @@ Fixtures</pre>
     <section>
         <h2>Test anpassen!</h2>
         <aside class="notes">
-            (JSON fuu baa)
+          | start browser | { 'name': 'windriver', 'remote': '!-http://-!192.168.50.136:4444/wd/hub','platform':'LINUX', 'browserName':'firefox'} | on url | http://xebia.github.io/ |
         </aside>
     </section>
 </section>
